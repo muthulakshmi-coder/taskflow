@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow – Kanban Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <h1 class="app-name">TaskFlow</h1>
+
+    <!-- Not functional yet: JavaScript is added in Week 2 -->
+    <form class="add-task-form" id="add-task-form">
+      <label class="visually-hidden" for="task-title-input">Task title</label>
+      <input class="task-input" id="task-title-input" type="text" placeholder="What needs doing?" required>
+
+      <label class="visually-hidden" for="task-priority-select">Priority</label>
+      <select class="priority-select" id="task-priority-select">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <button class="add-btn" type="submit">Add task</button>
+    </form>
+  </header>
+
+  <main class="board">
+
+    <section class="column" id="todo" aria-labelledby="todo-heading">
+      <h2 class="column-heading" id="todo-heading">To Do <span class="task-count">(3)</span></h2>
+      <div class="task-list">
+
+        <article class="task-card">
+          <h3 class="task-title">Design the login page wireframe</h3>
+          <div class="task-meta">
+            <span class="priority priority-high">High</span>
+            <time class="due-date" datetime="2026-12-02">Due 2 Dec</time>
+          </div>
+        </article>
+
+        <article class="task-card">
+          <h3 class="task-title">Write project README</h3>
+          <div class="task-meta">
+            <span class="priority priority-medium">Medium</span>
+            <time class="due-date" datetime="2026-12-04">Due 4 Dec</time>
+          </div>
+        </article>
+
+        <article class="task-card">
+          <h3 class="task-title">Pick a colour palette</h3>
+          <div class="task-meta">
+            <span class="priority priority-low">Low</span>
+            <time class="due-date" datetime="2026-12-06">Due 6 Dec</time>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="column" id="in-progress" aria-labelledby="progress-heading">
+      <h2 class="column-heading" id="progress-heading">In Progress <span class="task-count">(2)</span></h2>
+      <div class="task-list">
+
+        <article class="task-card">
+          <h3 class="task-title">Build the three-column board layout</h3>
+          <div class="task-meta">
+            <span class="priority priority-high">High</span>
+            <time class="due-date" datetime="2026-11-27">Due 27 Nov</time>
+          </div>
+        </article>
+
+        <article class="task-card">
+          <h3 class="task-title">Style the priority labels</h3>
+          <div class="task-meta">
+            <span class="priority priority-medium">Medium</span>
+            <time class="due-date" datetime="2026-11-28">Due 28 Nov</time>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="column" id="done" aria-labelledby="done-heading">
+      <h2 class="column-heading" id="done-heading">Done <span class="task-count">(1)</span></h2>
+      <div class="task-list">
+
+        <article class="task-card">
+          <h3 class="task-title">Set up Git repository</h3>
+          <div class="task-meta">
+            <span class="priority priority-low">Low</span>
+            <time class="due-date" datetime="2026-11-24">Due 24 Nov</time>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
